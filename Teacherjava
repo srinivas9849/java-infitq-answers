@@ -1,33 +1,3 @@
-package com.company;
-import java.lang.reflect.Field;
-public class Tester1 {
-
-
-    public static void main(String[] args) {
-
-            long[] restaurantContacts = { 9992346725L, 9992346726L, 9992346727L };
-            Restaurant restaurant1 = new Restaurant("SwiftFood",
-                    restaurantContacts, "Carolina Street, Springfield, 62702", 4.1f);
-            restaurant1.displayRestaurantDetails();
-
-
-
-            Teacher[] obj = new Teacher[4];
-
-            obj[0]=new Teacher("Alex","java",15550);
-            obj[0].displayDetailsOfTeachers();
-
-
-
-
-
-
-
-
-    }
-
-
-}
 class Teacher {
     //Implement your code here
     private String teacherName;
@@ -61,5 +31,3 @@ class Teacher {
         System.out.println("Name : "+this.teacherName+", "+"Subject : "+this.subject+", "+"Salary : "+salary);
 
     }
-}
-
