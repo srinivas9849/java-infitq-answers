@@ -1,0 +1,55 @@
+class Booking {
+    private String customerEmail;
+    private int seatsRequired;
+    private boolean isBooked;
+    private static int seatsAvailable;
+    public Booking(String customerEmail, int seatsRequired){
+        this.customerEmail=customerEmail;
+        this.seatsRequired=seatsRequired;
+        if(seatsRequired<=seatsAvailable){
+            this.seatsAvailable=this.seatsAvailable-this.seatsRequired;
+            this.setBooked(true);
+
+        }
+        else setBooked(false);
+
+
+    }
+    private static int bookingSeatsAvailableInitial(){
+        return seatsAvailable;
+
+    }
+    public void setBooked(boolean isBooked){
+        this.isBooked=isBooked;
+
+
+    }
+
+    public static int getSeatsAvailable() {
+        return seatsAvailable;
+    }
+
+    public int getSeatsRequired() {
+        return seatsRequired;
+    }
+
+    public String getCustomerEmail() {
+        return customerEmail;
+    }
+
+    public boolean isBooked() {
+        return this.isBooked;
+    }
+
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
+    }
+
+    public static void setSeatsAvailable(int seatsAvailable) {
+        Booking.seatsAvailable = seatsAvailable;
+    }
+
+    public void setSeatsRequired(int seatsRequired) {
+        this.seatsRequired = seatsRequired;
+    }
+}
